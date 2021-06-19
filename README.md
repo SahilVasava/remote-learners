@@ -12,11 +12,13 @@
 
 ## Tasks:
 
-- [] Create the project repo
+- [x] Create the project repo
 - [] sign up for twitch dev account , get api credentials
 - [] Create the frontend
 - [] Create the backend
     - [] Create a twitch bot
-        - [] Listen for twitch commands
+        - [x] Listen for twitch commands
         - [] It should log the tasks to database 
     - [] Create auth functionality
+    - [] Configure postgresql as a db
+    - [] create the database model
