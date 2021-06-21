@@ -3,14 +3,14 @@ const { response } = require('express');
 const express = require('express');
 const bodyParser = require('body-parser')
 const morgan = require('morgan');
-const client = require('./routes/twitch-bot')
-const tbotRun = require('./routes/twitch-bot1')
+const { twitchBot } = require('./controllers')
+//const tbotRun = require('./routes/twitch-bot1')
 
 const app = express()
 
 
 //Connect to Twitch:
-client.connect().catch(console.error);
+twitchBot.connect().catch(console.error);
 //tbotRun();
 
 // Middlewares

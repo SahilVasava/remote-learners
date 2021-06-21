@@ -20,5 +20,13 @@
         - [x] Listen for twitch commands
         - [] It should log the tasks to database 
     - [] Create auth functionality
-    - [] Configure postgresql as a db
+    - [x] Configure postgresql as a db
     - [] create the database model
+
+## Bot commands:
+/remote
+
+/remote task learn python
+/remote show
+/remote done id
+/remote undone id
