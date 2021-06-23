@@ -16,12 +16,14 @@
 - [] sign up for twitch dev account , get api credentials
 - [] Create the frontend
 - [] Create the backend
-    - [] Create a twitch bot
+    - [x] Create a twitch bot
         - [x] Listen for twitch commands
-        - [] It should log the tasks to database 
+        - [x] It should log the tasks to database 
     - [] Create auth functionality
     - [x] Configure postgresql as a db
-    - [] create the database model
+        - [x] use sequelize
+    - [x] create the database model
+        - [x] create a separate user table
 
 ## Bot commands:
 /remote

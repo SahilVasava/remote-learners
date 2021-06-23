@@ -1,23 +1,20 @@
 require('dotenv').config();
-const { response } = require('express');
 const express = require('express');
-const bodyParser = require('body-parser')
 const morgan = require('morgan');
 const { twitchBot } = require('./controllers')
-//const tbotRun = require('./routes/twitch-bot1')
+//const db = require('./db');
 
 const app = express()
 
 
 //Connect to Twitch:
 twitchBot.connect().catch(console.error);
-//tbotRun();
 
 // Middlewares
 app.use(morgan('tiny'));
-app.use(bodyParser.json())
+app.use(express.json())
 app.use(
-    bodyParser.urlencoded({
+    express.urlencoded({
         extended: true,
     })
 )
