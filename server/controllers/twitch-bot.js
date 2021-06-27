@@ -72,12 +72,13 @@ const onMessageHandler = async (target, context, msg, self) => {
 
     // Remove whitespace from chat message
     const commandName = msg.trim().split(" ");
+    console.log(context)
 
     // If the command is known, let's execute it
     if (commandName[0] === '!remote') {
         switch (commandName[1]) {
             case 'task':
-                await botTask(target, commandNamem, context);
+                await botTask(target, commandName, context);
                 break
             case 'show':
                 await botShow(target, commandName, context);

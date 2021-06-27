@@ -52,6 +52,7 @@ User.init({
     freezeTableName: true
 });
 
+User.hasMany(Task, { as: 'tasks' });
 Task.belongsTo(User);
 
 (async () => {

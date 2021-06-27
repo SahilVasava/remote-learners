@@ -13,17 +13,18 @@
 ## Tasks:
 
 - [x] Create the project repo
-- [] sign up for twitch dev account , get api credentials
-- [] Create the frontend
-- [] Create the backend
+- [x] Create the frontend
+    - [x] fetch the tasks from backend
+    - [x] display tasks in cards
+- [x] Create the backend
     - [x] Create a twitch bot
         - [x] Listen for twitch commands
         - [x] It should log the tasks to database 
-    - [] Create auth functionality
     - [x] Configure postgresql as a db
         - [x] use sequelize
     - [x] create the database model
         - [x] create a separate user table
+    - [x] create a route to fetch all tasks
 
 ## Bot commands:
 /remote

@@ -1,8 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
-const { twitchBot } = require('./controllers')
-//const db = require('./db');
+const cors = require('cors');
+const { twitchBot } = require('./controllers');
+const taskRoute = require('./routes/task');
+//const { Task, User } = require('./db');
 
 const app = express()
 
@@ -18,12 +20,16 @@ app.use(
         extended: true,
     })
 )
+app.use(cors());
+
+//routes
+app.use('/task', taskRoute);
 
 app.get('/', (request, response) => {
     response.json('Got it')
 })
 
-app.listen(process.env.port || 3000, () => {
+app.listen(process.env.port || 4000, () => {
     console.log(`Listening`);
 });
 
